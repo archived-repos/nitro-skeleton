@@ -1,0 +1,5 @@
+@import 'classes';
+
+body > h3 {
+  @extend .text-center;
+}
