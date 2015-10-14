@@ -7,16 +7,20 @@ require('nitro')(function (nitro) {
 
     nitro.task('build-dev', ['clear:public', 'js:dev', 'sass:dev', 'templates:dev']);
 
+    function logTime () {
+      console.log( new Date() );
+    }
+
     nitro.task('dev', ['build-dev'], function () {
-      nitro.watch('js', ['js:dev', 'templates:dev']);
-      nitro.watch('styles', ['sass:dev']);
-      nitro.watch('templates', ['templates:dev']);
+      nitro.watch('js', ['js:dev', 'templates:dev', logTime]);
+      nitro.watch('styles', ['sass:dev', logTime]);
+      nitro.watch('templates', ['templates:dev', logTime]);
 
       nitro.livereload('public');
     });
 
     nitro.task('live', ['dev'], function () {
-      nitro.serve({
+      nitro.server({
         root: 'public',
         openInBrowser: true
       });

@@ -6,7 +6,7 @@ module.exports = function (nitro) {
   nitro.task('js', {
     dev: function (target) {
       nitro.package('bower').dependencies().copy('public/vendor');
-      nitro.dir('js').load('{,**/}*.js').copy('dist/js');
+      nitro.dir('js').copy('{,**/}*.js', 'public');
     },
     default: function () {
       nitro.package('bower').dependencies().copy('.tmp/vendor');
@@ -23,4 +23,4 @@ module.exports = function (nitro) {
     }
   });
 
-});
+};

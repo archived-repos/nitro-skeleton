@@ -8,19 +8,19 @@ whoami = $(shell whoami)
 install:
 	npm install
 	bower install
-	@node run build
+	@node make build
 
 auto.install:
 	@node auto-install
 
 live: auto.install
-	@node run live
+	@node make live
 
 dev: auto.install
-	@node run watch
+	@node make watch
 
 build: auto.install
-	@node run build
+	@node make build
 
 # DEFAULT TASKS
 

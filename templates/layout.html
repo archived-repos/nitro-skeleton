@@ -7,7 +7,7 @@
   </head>
   <body>
     $include{ header }
-    <div class="page">${page}</div>
+    <div class="page ${pageClass}">${page}</div>
 
     $if{ dev }<script src="http://localhost:35729/livereload.js"></script>{/}
     $include{ jsLibs }
