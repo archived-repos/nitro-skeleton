@@ -22,11 +22,6 @@ dev: auto.install
 build: auto.install
 	@node run build
 
-release: publish
-
-echo:
-	@echo "make options: build dev live"
-
 # DEFAULT TASKS
 
-.DEFAULT_GOAL := echo
+.DEFAULT_GOAL := build

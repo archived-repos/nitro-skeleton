@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    $include{ cssLibs }
+  </head>
+  <body>
+    $include{ header }
+    <div class="page">${page}</div>
+
+    $if{ dev }<script src="http://localhost:35729/livereload.js"></script>{/}
+    $include{ jsLibs }
+  </body>
+</html>

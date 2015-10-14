@@ -12,6 +12,6 @@
   "author": "Jesús Germade <jesus@germade.es>",
   "license": "MIT",
   "devDependencies": {
-    "nitro": "^1.4.11"
+    "nitro": "^1.5.15"
   }
 }
