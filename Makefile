@@ -17,7 +17,7 @@ live: auto.install
 	@node make live
 
 dev: auto.install
-	@node make watch
+	@node make dev
 
 build: auto.install
 	@node make build
